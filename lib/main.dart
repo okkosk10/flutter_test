@@ -5,7 +5,18 @@ import 'package:provider/provider.dart';
 import 'manager/app_manager.dart';
 import 'router/app_router.dart';
 
-void main() {
+// Firebase
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // ✅ Firebase 초기화
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(
     MultiProvider(
       providers: [
@@ -47,7 +58,6 @@ class HomePage extends StatelessWidget {
             onPressed: () => Get.toNamed('/compare'),
             child: const Text("Provider vs GetX 비교"),
           ),
-          // 앞으로 테스트 페이지 버튼을 여기에 추가
           ElevatedButton(
             onPressed: () => Get.toNamed('/network'),
             child: const Text("네트워크/데이터 통신 비교"),
@@ -59,6 +69,14 @@ class HomePage extends StatelessWidget {
           ElevatedButton(
             onPressed: () => Get.toNamed('/ui'),
             child: const Text("UI/UX 컴포넌트 비교"),
+          ),
+          ElevatedButton(
+            onPressed: () => Get.toNamed('/media'),
+            child: const Text("Media 패키지 비교"),
+          ),
+          ElevatedButton(
+            onPressed: () => Get.toNamed('/firebase'),
+            child: const Text("Firebase 패키지 비교"),
           ),
         ],
       ),
