@@ -8,10 +8,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("Home")),
       body: const Center(
-        child: Text(
-          "Welcome to Home!",
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        ),
+        child: Text("Welcome to Home Screen"),
       ),
     );
   }
