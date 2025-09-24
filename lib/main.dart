@@ -52,6 +52,14 @@ class HomePage extends StatelessWidget {
             onPressed: () => Get.toNamed('/network'),
             child: const Text("네트워크/데이터 통신 비교"),
           ),
+          ElevatedButton(
+            onPressed: () => Get.toNamed('/storage'),
+            child: const Text("로컬 저장소 비교"),
+          ),
+          ElevatedButton(
+            onPressed: () => Get.toNamed('/ui'),
+            child: const Text("UI/UX 컴포넌트 비교"),
+          ),
         ],
       ),
     );
