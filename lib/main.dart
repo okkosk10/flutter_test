@@ -48,6 +48,10 @@ class HomePage extends StatelessWidget {
             child: const Text("Provider vs GetX 비교"),
           ),
           // 앞으로 테스트 페이지 버튼을 여기에 추가
+          ElevatedButton(
+            onPressed: () => Get.toNamed('/network'),
+            child: const Text("네트워크/데이터 통신 비교"),
+          ),
         ],
       ),
     );
