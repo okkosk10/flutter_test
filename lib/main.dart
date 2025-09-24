@@ -80,15 +80,23 @@ class HomePage extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () => Get.toNamed('/auth'),
-            child: const Text("auth 패키지 비교"),
+            child: const Text("Auth 패키지 비교"),
           ),
           ElevatedButton(
             onPressed: () => Get.toNamed('/crypto'),
-            child: const Text("crypto 패키지 비교"),
+            child: const Text("Crypto 패키지 비교"),
           ),
           ElevatedButton(
             onPressed: () => Get.toNamed('/platform'),
-            child: const Text("platform 패키지 비교"),
+            child: const Text("Platform 패키지 비교"),
+          ),
+          ElevatedButton(
+            onPressed: () => Get.toNamed('/utility'),
+            child: const Text("Util 패키지 비교"),
+          ),
+          ElevatedButton(
+            onPressed: () => Get.toNamed('/misc'),
+            child: const Text("Misc 패키지 비교"),
           ),
         ],
       ),

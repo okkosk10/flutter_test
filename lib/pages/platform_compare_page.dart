@@ -60,7 +60,8 @@ class _PlatformComparePageState extends State<PlatformComparePage> {
   Future<void> _getPackageInfo() async {
     final info = await PackageInfo.fromPlatform();
     setState(() {
-      _status = "앱 정보: ${info.appName}, v${info.version} (${info.buildNumber})";
+      _status =
+      "앱 정보: ${info.appName}, v${info.version} (${info.buildNumber})";
     });
   }
 
@@ -122,6 +123,16 @@ class _PlatformComparePageState extends State<PlatformComparePage> {
               ],
             ),
             const SizedBox(height: 20),
+
+            // 🟢 키보드 테스트용 입력창
+            TextField(
+              decoration: const InputDecoration(
+                labelText: "여기에 입력해서 키보드를 열어보세요",
+                border: OutlineInputBorder(),
+              ),
+            ),
+            const SizedBox(height: 20),
+
             Expanded(
               child: SingleChildScrollView(
                 child: Text(
