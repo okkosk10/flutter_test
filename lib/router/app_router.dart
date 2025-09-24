@@ -5,6 +5,9 @@ import '../pages/storage_compare_page.dart';
 import '../pages/ui_compare_page.dart';
 import '../pages/media_compare_page.dart';
 import '../pages/firebase_compare_page.dart';
+import '../pages/auth_compare_page.dart';
+import '../pages/crypto_compare_page.dart';
+import '../pages/platform_compare_page.dart';
 
 class AppRouter {
   static final routes = [
@@ -14,5 +17,8 @@ class AppRouter {
     GetPage(name: '/ui', page: () => const UiComparePage()),
     GetPage(name: '/media', page: () => const MediaComparePage()),
     GetPage(name: '/firebase', page: () => const FirebaseComparePage()),
+    GetPage(name: '/auth', page: () => const AuthComparePage()),
+    GetPage(name: '/crypto', page: () => const CryptoComparePage()),
+    GetPage(name: '/platform', page: () => const PlatformComparePage()),
   ];
 }
